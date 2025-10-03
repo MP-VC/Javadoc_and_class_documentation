@@ -46,7 +46,7 @@ public class SupportSystem
                 finished = true;
             }
             else {
-                counter.addWords(input);
+                counter.addWords(input,responder.getResponseMapKeys());
                 String response = responder.generateResponse(input);
                 System.out.println(response);
             }

@@ -38,5 +38,16 @@ public class WordCounter
         outGoodbye++;
         return outGoodbye;
     }
-    
+    public void addWords(HashSet<String> input, HashSet<String> knownKeywords)
+    {
+        for(String word : input)
+        {
+            if(!knownKeywords.contains(word)) 
+            {  
+                int counter = counts.getOrDefault(word, 0);
+                counts.put(word, counter + 1);
+            }
+        }
+    }
+
 }
