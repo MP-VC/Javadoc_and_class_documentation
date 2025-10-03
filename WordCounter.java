@@ -11,13 +11,14 @@ public class WordCounter
 {
     // Associate each word with a count.
     private final HashMap<String, Integer> counts;
-
+    private int outGoodbye;
     /**
      * Create a WordCounter
      */
     public WordCounter()
     {
         counts = new HashMap<>();
+        int outGoodbye=0;
     }
     
     /**
@@ -31,4 +32,11 @@ public class WordCounter
             counts.put(word, counter + 1);
         }
     }
+    
+    public int outGoodbye()
+    {
+        outGoodbye++;
+        return outGoodbye;
+    }
+    
 }
